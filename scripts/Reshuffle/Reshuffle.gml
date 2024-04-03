@@ -1,6 +1,7 @@
 // v2.3.0的脚本资产已更改，请参见\ n // https://help.yoyogames.com/hc/en-us/articles/360005277377
 function Reshuffle(){
 	audio_play_sound(snd_shuffle,10,false);
+	ds_list_shuffle(discard_list);
 	while(!ds_list_empty(discard_list)){
 		var card = discard_list[|ds_list_size(discard_list)-1];
 		ds_list_delete(discard_list,ds_list_size(discard_list)-1);
